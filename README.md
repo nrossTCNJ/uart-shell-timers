@@ -5,7 +5,7 @@ This project adds onto my previous project, the UART Command Shell with I2C Sens
 1. PWM Timer Initialization\
    A PWM signal was generated using a timer peripheral. This allowed for an LED's brightness to be changed manually in the code. To do this, a PWM timer was configured using GPIO, alternate function mode, PWM Mode 1, calculating prescaler (PSC) and auto-reload register (ARR) values, and setting/clearing necessary register flags.
 2. LED Brightness UART Command\
-   A command was added to the UART Shell, "dim XX", to allow the user to set the brightness percentage of the LED, with 0 being off and 100 being maximum brightness. The compare register CCR1 was used to change the duty cycle of the LED.
+   A command was added to the UART Shell, "dim XXX", to allow the user to set the brightness percentage of the LED, with 0 being off and 100 being maximum brightness. The compare register CCR1 was used to change the duty cycle of the LED.
 3. Stream Command Fix\
    The "stream" command from the last project was updated to use interrupts for non-blocking streaming. GPIO was not needed for this implementation. The timer was configured such that PSC and ARR created a period of two seconds, so the MPU-6500 sensor data was updated to the shell every two seconds. An IRQHandler function was also made to update the state of the data stream.
 4. LED Pulse Command\
