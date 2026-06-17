@@ -14,3 +14,4 @@ This project adds onto my previous project, the UART Command Shell with I2C Sens
    The project's code was refactored to be more organized, easier to follow, and the code's intent is more clear. This was done by moving the "process_command" function into its own C file, and cleaning up the main loop.
 
 # What was learned overall
+This project reinforced and introduced topics related to embedded systems including GPIO enables, alternate function modes, timer interrupts, register configuration, flag update enables, interrupt enables, duty-cycle and PWM, concurrency, and bare-metal programming. The next project will implement the SPI communication protocol with a MFRC522 sensor, meaning the project would use UART, I2C, and SPI protocols. Additionally, this project still has great potential for future additions such as communication with an LCD, motion sensors, etc.
